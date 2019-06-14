@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  ngnix:
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+    ports:
+      - "5000:5000"
+    links:
+      - app
+  app:
+    build:
+      context: .
+      dockerfile: app.dockerfile
+  vouch:
+    image: voucher/vouch-proxy
+    ports:
+      - "9090:9090"
