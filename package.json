@@ -4,20 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "npx nodemon"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^1.18.10"
-  },
+  "devDependencies": {},
   "nodemonConfig": {
     "ignore": [
       "node_modules"
     ],
     "exec": "docker-compose up --build",
-    "extension": [
-      "*.*"
-    ]
+    "ext": "js,json,yml,dockerfile,conf"
   }
 }

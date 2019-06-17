@@ -2,26 +2,35 @@
 # bare minimum to get vouch running with OpenID Connect (such as okta)
 
 vouch:
-  # domains:
+  domains:
+    - cypherium.io
   # valid domains that the jwt cookies can be set into
   # the callback_urls will be to these domains
-  domains:
-    - cypher.com
-
   # - OR -
   # instead of setting specific domains you may prefer to allow all users...
   # set allowAllUsers: true to use Vouch Proxy to just accept anyone who can authenticate at the configured provider
   # allowAllUsers: true
 
+# Generic OpenID Connect
+# including okta
 oauth:
-  # Generic OpenID Connect
-  # including okta
   provider: oidc
-  auth_url: https://cypher.auth.eu-east-2.amazoncognito.com/oauth2/authorize
-  token_url: https://cypher.auth.eu-east-2.amazoncognito.com/oauth2/token
-  user_info_url: https://cypher.auth.eu-east-2.amazoncognito.com/oauth2/userInfo
+  client_id: 0oaq9v31eovlAaZbe356
+  client_secret: p7dMT4EYnJyrc6_5nvZh6XtRjlO8hgaaX0x5ox3a
+  auth_url: https://dev-395403.okta.com/oauth2/default/v1/authorize
+  token_url: https://dev-395403.okta.com/oauth2/default/v1/token
+  user_info_url: https://dev-395403.okta.com/oauth2/default/v1/userinfo
   scopes:
     - openid
     - email
-    - profile
-  callback_url: http://cypher.com:9090/auth
+  # Set the callback URL to the domain that Vouch is running on
+  callback_url: https://cloud-login.cypherium.io/auth
+  # provider: oidc
+  # client_id: 74g4tnuemgug0c2tjm8b9vs2kg
+  # auth_url: https://cypher.auth.us-east-2.amazoncognito.com/oauth2/authorize
+  # token_url: https://cypher.auth.us-east-2.amazoncognito.com/oauth2/token
+  # user_info_url: https://cypher.auth.us-east-2.amazoncognito.com/oauth2/userInfo
+  # scopes:
+  #   - openid
+  #   - email
+  #   - profile
