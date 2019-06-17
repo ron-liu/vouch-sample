@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: nginx.dockerfile
     ports:
-      - "80:80"
+      - "9000:9000"
       - "9090:9090"
     links:
       - app

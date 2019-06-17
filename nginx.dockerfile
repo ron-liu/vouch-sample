@@ -1,5 +1,6 @@
 FROM nginx:alpine
 
-EXPOSE 5000
+EXPOSE 9000
+EXPOSE 9090
 
 COPY nginx.conf /etc/nginx/nginx.conf
