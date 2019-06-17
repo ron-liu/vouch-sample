@@ -16,6 +16,6 @@ In the above diagram, we use the `auth_request` module in `nginx` to send authen
 
 However, there is one route need to protect which is `https://cloud.cypherium.io/private`, if the user request this url, it will lead user to a `sign-in` page, if user doesn't have the existing credential, user can click `sign-up` to create a new account.
 
-| Sing In | Sign Up |
-| ======= | ======= |
-| ![Sign in](./sign-in.png) |![Sign up](./sign-up.png) |
+| Sing In                   | Sign Up                   |
+| ------------------------- | ------------------------- |
+| ![Sign in](./sign-in.png) | ![Sign up](./sign-up.png) |
