@@ -14,6 +14,6 @@
       "node_modules"
     ],
     "exec": "docker-compose up --build",
-    "ext": "js,json,yml,dockerfile,conf"
+    "ext": "js,json,yml,dockerfile,conf,svg,html"
   }
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Get Started with Cypherium</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .block {
+        border: 1px solid lightgray;
+        padding: 40px;
+        border-radius: 5px;
+      }
+      .logo {
+        height: 45px;
+        text-align: center;
+        width: auto;
+      }
+      .actions {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-around;
+      }
+      .actions a {
+        border-radius: 3px;
+        border: 1px lightgray solid;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .actions a:hover {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block">
+      <h1>Get Started With Cypherium</h1>
+      <div class="logo">
+        <img src="logo.svg" style="height: 100%" />
+      </div>
+      <div class="actions">
+        <a onclick="signIn()">Sign In</a>
+        <a onclick="signUp()">Sign Up</a>
+      </div>
+    </div>
+    <script>
+      function signIn() {
+        window.location.href =
+          "https://cloud-login.cypherium.io/login?url=" + window.location.href;
+      }
+      function signUp() {
+        window.location.href = "https://dev-395403.okta.com/signin/register";
+      }
+    </script>
+  </body>
+</html>
